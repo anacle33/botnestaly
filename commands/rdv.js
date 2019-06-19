@@ -9,6 +9,8 @@ module.exports.run = async (bot, message, args) => {
     }
     let rUser = message.author;
     let raison = args.join(" ");
+    
+    message.reply("votre demande a bien été soumise, on vous recontactera pour avoir un horaire pour passer les tests")
 
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Demande RDV")
