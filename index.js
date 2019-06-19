@@ -5,6 +5,7 @@ const bot = new Discord.Client();
 var prefix = "!";
 
 bot.on('message', message => {
+	let sender = message.author;
 let args = message.content.slice(prefix.length).trim().split(" ");
     let cmds = args.shift().toLowerCase();
 
