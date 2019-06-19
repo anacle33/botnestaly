@@ -7,10 +7,15 @@ module.exports.run = async (bot, message, args) => {
       message.reply("Usage: !rdv <présentation de vous et lettre de motivation>");
       return;
     }
+    function entierAleatoire(min, max)
+    {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    } 
     let rUser = message.author;
     let raison = args.join(" ");
+    let number = entierAleatoire(1, 9999);
     
-    message.reply("votre demande a bien été soumise, on vous recontactera pour avoir un horaire pour passer les tests")
+    message.reply(`votre demande a bien été soumise, on vous recontactera pour avoir un horaire pour passer les tests PS: retenez votre tiket ${number}`)
 
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Demande RDV")
