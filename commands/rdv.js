@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     message.reply(`votre demande a bien été soumise, on vous recontactera pour avoir un horaire pour passer les tests PS: retenez votre tiket ${number}`)
 
     let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Demande RDV")
+    .setDescription(`Demande RDV tiket: ${number}`)
     .setColor("#E43333")
     .addField("Demande de rdv par l'utilisateur ", `${rUser} ID: ${rUser.id}`)
     .addField("Channel", message.channel)
