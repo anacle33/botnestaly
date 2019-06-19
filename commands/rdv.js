@@ -8,7 +8,6 @@ module.exports.run = async (bot, message, args) => {
       return;
     }
     let rUser = message.author;
-    let rreason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Demande RDV")
@@ -20,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
 
     let reportschannel = message.guild.channels.find(`name`, "demande-de-rdv-admin");
     if(!reportschannel) return message.channel.send("Je ne trouve pas le channel demande-de-rdv-admin");
-    reportschannel.send(reportEmbed);
+    reportschannel.send(args);
 
 }
 
