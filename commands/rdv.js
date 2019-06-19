@@ -15,10 +15,10 @@ module.exports.run = async (bot, message, args) => {
     let raison = args.join(" ");
     let number = entierAleatoire(1, 9999);
     
-    message.reply(`votre demande a bien été soumise, on vous recontactera pour avoir un horaire pour passer les tests PS: retenez votre tiket ${number}`)
+    message.reply(`votre demande a bien été soumise, on vous recontactera pour avoir un horaire pour passer les tests PS: retenez votre ticket ${number}`)
 
     let reportEmbed = new Discord.RichEmbed()
-    .setDescription(`Demande RDV tiket: ${number}`)
+    .setDescription(`Demande RDV ticket: ${number}`)
     .setColor("#E43333")
     .addField("Demande de rdv par l'utilisateur ", `${rUser} ID: ${rUser.id}`)
     .addField("Channel", message.channel)
