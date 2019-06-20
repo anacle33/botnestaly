@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Demande de rdv par l'utilisateur ", `${rUser} ID: ${rUser.id}`)
     .addField("Channel", message.channel)
     .addField("Time", message.createdAt)
-    .addField("Présentation et motivation", raison);
+    .addField("Présentation et motivation", raison)
 
     let reportschannel = message.guild.channels.find(`name`, "demande-de-rdv-admin");
     if(!reportschannel) return message.channel.send("Je ne trouve pas le channel demande-de-rdv-admin");
