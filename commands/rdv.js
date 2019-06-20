@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     let rUser = message.author;
     let raison = args.join(" ");
     let number = entierAleatoire(1, 9999);
-    if(!args) return message.channel.send('Demande de rdv non valide');
+    if(!raison) return message.channel.send('Demande de rdv non valide');
     
     message.reply(`votre demande a bien été soumise, on vous recontactera pour avoir un horaire pour passer les tests PS: retenez votre ticket ${number}`)
 
