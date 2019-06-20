@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.member.hasPermission("Administrator")) return message.channel.send("Vous n'avez pas la permission Administrateur");
+    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Vous n'avez pas la permission Administrateur");
             message.delete();
             if(args[0] == "help"){
                 message.reply("Usage: !news <votre news>");
